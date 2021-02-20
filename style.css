@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('images/weather.jpg');
+    height: 100vh;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: top center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+}
+
+.app-main {
+    width: 50vh;
+    margin: 100px auto;
+    background-color: rgba(252, 149, 39, 0.58);
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+}
+
+.app-main > *{
+    margin-bottom: 20px;
+}
+
+.wave{
+    opacity: 0.3;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    background: linear-gradient(to left,rgb(255, 255, 255),yellow,rgb(31, 206, 15),rgb(255, 76, 231),#95ecfc);
+    width: 50rem;
+    height: 50rem;
+    margin-left: -25rem;
+    margin-top: -15rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+    z-index: 1 !important;
+    overflow: hidden;
+}
+@keyframes drift {
+    from {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+.input-box {
+    width: 100%;
+    background-color: rgba(255,255,255,0.6);
+    border: none;
+    color: #582233;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.input-box:focus{
+    background-color: rgba(255,255,255);
+}
+
+.weather-body{
+    display: none;
+    color: #582233;
+    padding: 20px;
+    line-height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.6);
+    height: 55vh;
+}
+
+.location-details {
+    font-weight: bold;
+}
+
+.weather-status{
+    padding: 20px;
+}
+
+.temp{
+    font-size: 50pt;
+    font-weight: 700;
+    margin: 20px 0;
+    text-shadow: 2px 4px rgba(0,0,0,0.3);
+}
+
+.min-max, .weather{
+font-size: 15px;
+font-weight: 600;
+}
+
+.img{
+  margin-right: 10px;  
+  height: 100px;
+  width: 100px;
+  opacity: 1;
+  z-index: 100;
+  visibility: visible;
+}
