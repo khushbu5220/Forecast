@@ -79,27 +79,44 @@ function showWeatherReport(weather){
 
         document.body.style.backgroundImage = "url('images/thunderstrom.jpg')";
 
-    }else if(weatherType.textContent == 'Clouds') {
+    }else if(weatherType.textContent == 'Mist') {
+
+        document.body.style.backgroundImage = "url('images/haze.jpg')";
+
+    }else if(weatherType.textContent == 'Smoke') {
+
+        document.body.style.backgroundImage = "url('images/smoke.jpg')";
+
+    }else if(weatherType.textContent == 'Dust') {
+
+        document.body.style.backgroundImage = "url('images/dust.jpg')";
+
+    }else if(weatherType.textContent == 'Fog') {
+
+        document.body.style.backgroundImage = "url('images/haze.jpg')";
+    
+    }else if(weatherType.textContent == 'Sand') {
+
+        document.body.style.backgroundImage = "url('images/dust.jpg')";
+                
+    }else if(weatherType.textContent == 'Ash') {
+
+        document.body.style.backgroundImage = "url('images/volcanic.jpg')";
+                
+    }else if(weatherType.textContent == 'Squall') {
 
         document.body.style.backgroundImage = "url('images/clouds.jpg')";
+                
+    }else if(weatherType.textContent == 'Tornado') {
 
-    }
+        document.body.style.backgroundImage = "url('images/tornado.jpg')";
+                
+    }else if(weatherType.textContent == 'Drizzle') {
 
-    function getImage(icon) {
-        fetch (`http://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@2x.png`)
-        .then(image => {
-            return image.json();
-        }).then(showImage);
+        document.body.style.backgroundImage = "url('images/drizzle.jpg')";
+                
     }
-    
-    function showImage(image){
-        console.log(image);
-    
-    
-        document.getElementById('img') = `${weather.list[0].weather[0].icon}`;  
-    
-    
-    }
+   
 }
 
 
